@@ -6,7 +6,6 @@ require 'nokogiri'
 class Scraper
 def self.get_upcoming
 	doc = Nokogiri::HTML(open("http://www.ufc.com/schedule/event"))
-	binding.pry
 	 doc
 end
 end
