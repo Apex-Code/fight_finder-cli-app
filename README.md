@@ -1,8 +1,7 @@
 # FightFinder
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/fight_finder`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+The goal of fight_finder is to provide a CLI interface in which users can retrieve information about upcoming MMA fights.  Users will be able to choose from a list of upcoming UFC fights and retrieve more information.
+ 
 
 ## Installation
 

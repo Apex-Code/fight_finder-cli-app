@@ -7,9 +7,9 @@ Gem::Specification.new do |spec|
   spec.name          = "fight_finder"
   spec.version       = FightFinder::VERSION
   spec.authors       = ["'David Mars'"]
-  spec.email         = ["'david.w.mars@my.occc.edu'"]
+  spec.email         = ["'upstaterounder@gmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because Rubygems requires one.}
+  spec.summary       = %q{Scrapes websites to retrieve info on upcoming UFC fights}
   spec.description   = %q{TODO: Write a longer description or delete this line.}
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
@@ -32,4 +32,7 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.14"
   spec.add_development_dependency "rake", "~> 10.0"
+  s.add_development_dependency "rspec", ">= 0"
+  s.add_development_dependency "nokogiri", ">= 0"
+  s.add_development_dependency "pry", ">= 0"
 end
