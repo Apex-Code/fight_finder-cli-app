@@ -3,7 +3,7 @@
 
 class Fights
 
-attr_accessor :event, :date, :main_bout
+attr_accessor :event, :date, :main_bout, :tickets
 
 
 
