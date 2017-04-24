@@ -5,24 +5,16 @@
 
 class Scraper
 
-	attr_accessor :html, :title, :channel, :date, :event_group, :tv
+	attr_accessor :html, :title, :date, :tv, :location
 def initialize
 @event_group = []
+@doc = Nokogiri::HTML(open("http://www.ufc.com/schedule/event"))
 end
 
 def get_page
-	Nokogiri::HTML(open("http://www.ufc.com/schedule/event"))
-end
 
-def get_upcoming
-   @tv = []
-   @tv << self.get_page.css("div.event-tagline a")[0,5].text
-	 @event_group<< self.get_page.css("div.event-title a")[0,5].text
-	 @event_group = @event_group[0].split("UFC")
-	 @tv = @tv[0].split("Live")
-	 @event_group
-
+@title = @doc.search("div.event-title a")[0,5].text.split("UFC").reject{|x| x.empty?}
+@tv = @doc.search("div.event-tagline a")[0,5].text.split("Live on").reject{|x| x.empty?}
+@date = @doc.search("td.event-info div.date")[0,5].text.scan(/[0-9]/)
 end
 end
-t = Scraper.new
-t.get_upcoming

@@ -4,7 +4,7 @@ require "bundler/gem_tasks"
 task :default => :spec
 
 def reload!
-  load './lib'
+  reload_all '../lib'
 end
 
 task :console do

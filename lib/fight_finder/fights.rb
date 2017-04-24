@@ -3,7 +3,11 @@
 
 class Fights
 
-attr_accessor :event, :date, :main_bout, :tickets
+attr_accessor :name, :date, :main_bout, :tickets, :events
+
+def initialize
+  @events = []
+end
 
 
 
