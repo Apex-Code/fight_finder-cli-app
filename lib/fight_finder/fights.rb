@@ -3,7 +3,7 @@
 
 class FightFinder::Fights
 
-attr_accessor :name, :tv, :location, :date, :main_event, :fight_card 
+attr_accessor :name, :tv, :location, :date, :main_event, :fight_card
 
 def self.upcoming
 	#by the end of this method, should return the next five upcoming fights!!
@@ -36,23 +36,22 @@ def self.upcoming
     fight_3.main_event = "Those two guys"
     fight_3.fight_card = "this one is a maybe"
 
-   fight_4 = self.new
-   fight_4.name = "event 311"
-   fight_4.location = "Houston, Texas"
-   fight_4.date = "03-06-1986"
-   fight_4.tv = "PPV only"
-   fight_4.main_event = "Those two guys"
-   fight_4.fight_card = "this one is a maybe"
+     fight_4 = self.new
+     fight_4.name = "event 311"
+     fight_4.location = "Houston, Texas"
+     fight_4.date = "03-06-1986"
+     fight_4.tv = "PPV only"
+     fight_4.main_event = "Those two guys"
+     fight_4.fight_card = "this one is a maybe"
 
-    fight_5 = self.new
-    fight_5.name = "event 311"
-    fight_5.location = "Houston, Texas"
-    fight_5.date = "03-06-1986"
-    fight_5.tv = "PPV only"
-    fight_5.main_event = "Those two guys"
-    fight_5.fight_card = "this one is a maybe"
-     [fight_1, fight_2, fight_3, fight_4, fight_5]
+      fight_5 = self.new
+      fight_5.name = "event 311"
+      fight_5.location = "Houston, Texas"
+      fight_5.date = "03-06-1986"
+      fight_5.tv = "PPV only"
+      fight_5.main_event = "Those two guys"
+      fight_5.fight_card = "this one is a maybe"
+       [fight_1, fight_2, fight_3, fight_4, fight_5]
 
     end
   end
-end
