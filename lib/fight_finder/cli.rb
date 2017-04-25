@@ -9,7 +9,7 @@ class FightFinder::CLI
   def list_fights
    @fights = FightFinder::Fights.upcoming
    @fights.each.with_index(1) do |fight, i|
-      puts "#{i}.  #{fight}"
+      puts "#{i}.  #{fight.name}  --  #{fight.location}"
     end
   end
 
