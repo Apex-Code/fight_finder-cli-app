@@ -1,14 +1,8 @@
 #   ~~~HAVICK WAS HERE~~~
 
 
-class Fights
+class FightFinder::Fights
 
-attr_accessor :name, :date, :main_bout, :tickets, :events
-
-def initialize
-  @events = []
-end
-
-
-
+def self.upcoming
+	#by the end of this method, should return the next five upcoming fights!!
 end

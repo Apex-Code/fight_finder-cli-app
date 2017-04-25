@@ -1,6 +1,2 @@
-require "fight_finder/version"
-
-module FightFinder
-end
-
-require_relative '../config/environment'
+require_relative 'fight_finder/version'
+require_relative './fight_finder/cli.rb'
