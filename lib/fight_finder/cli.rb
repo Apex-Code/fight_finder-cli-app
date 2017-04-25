@@ -8,15 +8,18 @@ class FightFinder::CLI
 
   def list_fights
    @fights = FightFinder::Fights.upcoming
+   @fights.each.with_index(1) do |fight, i|
+      puts "#{i}.  #{fight}"
+    end
   end
 
   def menu
-    input = ""
+    input = nil
     while input != "exit"
       puts "Enter the Fight you'd like more info on, type list to see fights again or exit to leave:"
       input = gets.strip.downcase
         if input.to_i  > 0
-          puts @fights[input.to_i -1]
+          puts @fights[input.to_i - 1]
         elsif input == "list"
           list_fights
         else

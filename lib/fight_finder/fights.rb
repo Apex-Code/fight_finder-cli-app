@@ -7,11 +7,6 @@ attr_accessor :name, :tv, :location, :date, :main_event, :fight_card
 
 def self.upcoming
 	#by the end of this method, should return the next five upcoming fights!!
-   puts "Upcoming Fights"
-   puts <<-DOC.gsub /^\s*/, ''
-          1.  Lots of Fights
-          2.  More Fights
-          DOC
      fight_1 = self.new
      fight_1.name = "event 211"
      fight_1.location = "Houston, Texas"
