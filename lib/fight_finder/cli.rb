@@ -7,13 +7,7 @@ class FightFinder::CLI
   end
 
   def list_fights
-    puts "Upcoming Fights"
-    puts <<-DOC.gsub /^\s*/, ''
-            1.  Lots of Fights
-            2.  More Fights
-            DOC
-
-    @fights = FightFinder:Fights.upcoming
+   @fights = FightFinder::Fights.upcoming
   end
 
   def menu
