@@ -3,50 +3,32 @@
 
 class FightFinder::Fights
 
-attr_accessor :name, :tv, :location, :date, :main_event, :fight_card
+attr_accessor  :date, :main_event, :co_main, :location, :name, :under_card
+@@all = []
 
-def self.upcoming
-	#by the end of this method, should return the next five upcoming fights!!
-     fight_1 = self.new
-     fight_1.name = "event 211"
-     fight_1.location = "Houston, Texas"
-     fight_1.date = "03-06-1986"
-     fight_1.tv = "PPV only"
-     fight_1.main_event = "Those two guys"
-     fight_1.fight_card = "this one is a maybe"
+def initialize
+@name = name
+@main_event = main_event
+@co_main = co_main
+@location = location
+@date = date
+@under_card = under_card
+@@all << self
+end
 
-    fight_2 = self.new
-    fight_2.name = "event 211"
-    fight_2.location = "Houston, Texas"
-    fight_2.date = "03-06-1986"
-    fight_2.tv = "PPV only"
-    fight_2.main_event = "Those two guys"
-    fight_2.fight_card = "this one is a maybe"
-
-    fight_3 = self.new
-    fight_3.name = "event 211"
-    fight_3.location = "Houston, Texas"
-    fight_3.date = "03-06-1986"
-    fight_3.tv = "PPV only"
-    fight_3.main_event = "Those two guys"
-    fight_3.fight_card = "this one is a maybe"
-
-     fight_4 = self.new
-     fight_4.name = "event 311"
-     fight_4.location = "Houston, Texas"
-     fight_4.date = "03-06-1986"
-     fight_4.tv = "PPV only"
-     fight_4.main_event = "Those two guys"
-     fight_4.fight_card = "this one is a maybe"
-
-      fight_5 = self.new
-      fight_5.name = "event 311"
-      fight_5.location = "Houston, Texas"
-      fight_5.date = "03-06-1986"
-      fight_5.tv = "PPV only"
-      fight_5.main_event = "Those two guys"
-      fight_5.fight_card = "this one is a maybe"
-       [fight_1, fight_2, fight_3, fight_4, fight_5]
-
-    end
+  def self.upcoming
+     FightFinder::Scraper.scrape_details
   end
+
+
+
+    def self.all
+      @@all
+    end
+
+    def save
+      self.all << self
+    end
+
+
+end
