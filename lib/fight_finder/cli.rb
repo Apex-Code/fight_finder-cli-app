@@ -30,11 +30,11 @@ class FightFinder::CLI
     input = nil
     while input != "exit"
       puts ""
-      puts "Want more info?  Pick one and I'll show you what Scrapey McScrapeface can do!!!"
+      puts " Pick one and I'll show you what Scrapey McScrapeface can do!!!"
       sleep 2
-      puts "                          Or you can type exit to make a lonely gem..."
+      puts "                (Or you can type exit to make a lonely gem)"
       input = gets.strip.downcase
-        if input.to_i  > 0
+        if input.to_i  > 0 && input.to_i <= events.length
         the_fight =  events[input.to_i - 1]
         puts ""
         puts ""
@@ -48,13 +48,20 @@ class FightFinder::CLI
         sleep 1
         puts "And the under-card is looking like:"
         puts ""
+        sleep 2
         puts "                                 #{the_fight.under_card}"
 
 
         elsif input == "list"
         list_fights
         else
-            puts "Not sure what you mean, type list to see options or exit to... quit." if input !="exit"
+            puts ""
+            puts "DID YOU REALLY JUST TRY TO BREAK ME??? " if input !="exit"
+            puts ""
+            sleep 2
+            puts "TYPE LIST, A (VALID) FIGHT NUMBER, OR EXIT BRO!"  if input !="exit"
+            puts ""
+            sleep 1
         end
       end
     end
