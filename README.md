@@ -1,7 +1,7 @@
 # FightFinder
 
-The goal of fight_finder is to provide a CLI interface in which users can retrieve information about upcoming MMA fights.  Users will be able to choose from a list of upcoming UFC fights and retrieve more information.
- 
+The goal of fight_finder is to provide a CLI interface in which users can retrieve information about upcoming MMA fights.  Users will be able to choose from a list of upcoming MMA fights and retrieve specific details including the main event and the undercard.
+
 
 ## Installation
 
@@ -19,9 +19,7 @@ Or install it yourself as:
 
     $ gem install fight_finder
 
-## Usage
 
-TODO: Write usage instructions here
 
 ## Development
 

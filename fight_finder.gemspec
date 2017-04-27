@@ -6,10 +6,10 @@ require 'fight_finder/version'
 Gem::Specification.new do |spec|
   spec.name          = "fight_finder"
   spec.version       = FightFinder::VERSION
-  spec.authors       = ["'David Mars'"]
+  spec.authors       = ["'Dave Mars'"]
   spec.email         = ["'upstaterounder@gmail.com'"]
 
-  spec.summary       = %q{Scrapes websites to retrieve info on upcoming UFC fights}
+  spec.summary       = %q{Scrapes websites to retrieve info on upcoming mma fights}
 
   spec.license       = "MIT"
 
