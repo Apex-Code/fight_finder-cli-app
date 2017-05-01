@@ -5,6 +5,7 @@ class FightFinder::CLI
     puts "One second, while I retrieve the next five upcoming fights for you!"
     puts ""
     get_fights
+    #binding.pry
     list_fights
     menu
     goodbye
@@ -19,7 +20,7 @@ class FightFinder::CLI
     puts "Fine.  WHATEVER.  The next five sanctioned MMA fights are:  "
     puts ""
     sleep 3
-    events.each.with_index(1) do |fight, i|
+    FightFinder::Fights.all.each.with_index(1) do |fight, i|
     puts "                                #{i}. #{fight.name}"
     puts ""
     sleep 2
@@ -34,8 +35,8 @@ class FightFinder::CLI
       sleep 2
       puts "                (Or you can type exit to make a lonely gem)"
       input = gets.strip.downcase
-        if input.to_i  > 0 && input.to_i <= events.length
-        the_fight =  events[input.to_i - 1]
+        if input.to_i  > 0 && input.to_i <= FightFinder::Fights.all.length
+        the_fight =  FightFinder::Fights.find(input.to_i - 1)
         puts ""
         puts ""
         puts "Thinking about checking out #{the_fight.name}?  Nice!"
@@ -77,9 +78,9 @@ class FightFinder::CLI
       puts "   O      E      E        A       O        E"
     end
 
-    def events
-      @events = FightFinder::Fights.all
-    end
+    #def events
+    #  @events = FightFinder::Fights.all
+  #  end
 
     def get_fights
       FightFinder::Fights.upcoming
