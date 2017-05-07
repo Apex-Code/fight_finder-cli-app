@@ -78,10 +78,6 @@ class FightFinder::CLI
       puts "   O      E      E        A       O        E"
     end
 
-    #def events
-    #  @events = FightFinder::Fights.all
-  #  end
-
     def get_fights
       FightFinder::Fights.upcoming
     end
