@@ -5,7 +5,6 @@ class FightFinder::CLI
     puts "One second, while I retrieve the next five upcoming fights for you!"
     puts ""
     get_fights
-    #binding.pry
     list_fights
     menu
     goodbye
